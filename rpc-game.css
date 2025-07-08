@@ -1,0 +1,102 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.choices {
+    display: flex;
+    justify-content: space-around;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.score-board {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+.score {
+    font-size: 30px;
+    text-align: center;
+}
+
+.score p:last-child {
+    font-weight: bold;
+}
+
+.message-container {
+    display: flex;
+    text-align: center;
+    padding-top: 40px;
+    font-size: 25px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.choice {
+    height: 170px;
+    width: 170px;
+    text-align: center;
+}
+
+.choice img {
+    height: 100%;
+    width: 100%;
+}
+
+.choice img:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+.choice:hover {
+    background: #000;
+    border-radius: 50%;
+}
+#msg {
+    background-color: #131111;
+    color: #fff;
+    font-size: 25px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    width: 200px;
+}
+
+#resetbtn {
+    display: none;
+    background-color: #131111;
+    color: #fff;
+    font-size: 25px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    width: 240px;
+}
+.blink {
+    animation: blink-opacity 1s infinite;
+    color: red;
+  }
+
+  @keyframes blink-opacity {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.2; /* low opacity instead of hidden */
+    }
+  }
+#gameover {
+    visibility: hidden;
+    text-align: center;
+    padding: 30px 0;
+}
+.choice.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
